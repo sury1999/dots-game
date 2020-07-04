@@ -1,0 +1,44 @@
+:root {
+  --cell-size: 100px;
+  --mark-size: calc(var(--cell-size) * 0.2);
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.container {
+
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(5, auto);
+
+}
+
+.individuals {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  border: 1px solid red;
+}
+
+.dots {
+  width: var(--mark-size);
+  height: var(--mark-size);
+  border-radius: 50%;
+  background-color: black;
+  position: relative;
+  top: 40%;
+  left: 40%;
+  cursor: pointer;
+}
